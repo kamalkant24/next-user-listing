@@ -39,9 +39,9 @@ export default async function Home() {
             content="List of users with their names and descriptions"
           />
         </Head>
-        <main className="min-h-screen bg-gray-100 text-black">
-          <div className="container mx-auto px-5">
-            <h1 className="text-3xl font-bold py-5">User List</h1>
+        <main className="min-h-screen bg-gray-100 text-black py-[64px]">
+          <div className="container mx-auto px-8 pt-4">
+            <h1 className="text-2xl font-bold py-5">User List</h1>
             <section className="user-listing">
               <div className="overflow-x-auto shadow rounded-xl">
                 <table className="min-w-full divide-y divide-gray-200">

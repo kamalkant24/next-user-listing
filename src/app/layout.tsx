@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,8 +19,9 @@ export default async function RootLayout({
       <body >
         {" "}
         {/* padding-top and padding-bottom to make space for fixed header/footer */}
-        <header className="shadow text-black py-4 px-10 flex justify-between items-center fixed top-0 bg-white w-full z-50">
-          <div className="text-2xl font-bold cursor-pointer">Test-Demo</div>
+        <header className="shadow text-black py-4 px-8 flex justify-between items-center fixed top-0 bg-white w-full z-50">
+          <div className="text-2xl font-bold cursor-pointer">
+          <Link href="/"> Test-Demo</Link></div>
           <Navbar />
         </header>
         <main>{children}</main>
