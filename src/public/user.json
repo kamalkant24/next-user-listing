@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "description": "Senior Frontend Developer with 8+ years experience",
+      "image": "/images/alex-suprun.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "description": "UX Specialist focusing on accessibility",
+      "image": "/images/alexander.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Emily Davis",
+      "description": "Digital Marketing Expert passionate about data-driven strategies",
+      "image": "/images/charlesdeluvio.jpg"
+    },
+    {
+      "id": 4,
+      "name": "James Smith",
+      "description": "Full Stack Developer with a love for open-source projects",
+      "image": "/images/christina.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Sophia Lee",
+      "description": "Graphic Designer specializing in branding and illustration",
+      "image": "/images/kimson-doan.jpg"
+    },
+    {
+      "id": 6,
+      "name": "David Brown",
+      "description": "AI Researcher working on innovative machine learning solutions",
+      "image": "/images/michael.jpg"
+    }
+  ]
+}
