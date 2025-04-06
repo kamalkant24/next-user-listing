@@ -1,7 +1,7 @@
 import { User } from "@/types/user";
-import UserCard from "@/components/UserCard";
 import { Metadata } from "next";
 import Head from "next/head";
+import Image from "next/image";
 
 export async function generateMetadata(): Promise<Metadata> {
   try {
@@ -14,9 +14,11 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     };
   } catch (error) {
+    console.log("error", error);
     return {
       title: "User List",
       description: "Community of professionals",
+
       openGraph: {
         images: ["/og-image.png"],
       },
@@ -45,16 +47,13 @@ export default async function Home() {
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-3 text-left text-[15px] font-semi-bold text-dark uppercase tracking-wider"
-                      >
+                      <th className="px-6 py-3 text-left text-[15px] font-semi-bold text-dark uppercase tracking-wider">
                         Avatar
                       </th>
-                      <th className="px-6 py-3 text-left text-[15px] font-semi-bold text-dark uppercase tracking-wider"
-                      >
+                      <th className="px-6 py-3 text-left text-[15px] font-semi-bold text-dark uppercase tracking-wider">
                         Name
                       </th>
-                      <th className="px-6 py-3 text-left text-[15px] font-semi-bold text-dark uppercase tracking-wider"
-                      >
+                      <th className="px-6 py-3 text-left text-[15px] font-semi-bold text-dark uppercase tracking-wider">
                         description
                       </th>
                     </tr>
@@ -65,10 +64,12 @@ export default async function Home() {
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center">
                             <div className="h-10 w-10 flex-shrink-0">
-                              <img
+                              <Image
                                 className="h-10 w-10 rounded-full object-cover"
                                 src={user.image || "/default-avatar.png"}
                                 alt={`${user.name}'s avatar`}
+                                width={40} // Define width
+                                height={40} // Define height
                               />
                             </div>
                           </div>
@@ -90,6 +91,7 @@ export default async function Home() {
       </>
     );
   } catch (error) {
+    console.log('error', error)
     return (
       <main className="min-h-screen bg-gray-50">
         <h2 className="sr-only">User List</h2>
