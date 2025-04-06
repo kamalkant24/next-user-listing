@@ -1,107 +1,49 @@
-import { User } from "@/types/user";
-import { Metadata } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import React from "react";
 
-export async function generateMetadata(): Promise<Metadata> {
-  try {
-    const { users } = await import("@/public/user.json");
-    return {
-      title: `User List - ${new Date().toLocaleDateString()}`,
-      description: `Browse our community of ${users.length} professionals`,
-      openGraph: {
-        images: ["/og-image.png"],
-      },
-    };
-  } catch (error) {
-    console.log("error", error);
-    return {
-      title: "User List",
-      description: "Community of professionals",
+const HomePage = () => {
+  return (
+    <div className="font-sans bg-gray-100 min-h-screen">
+      {/* Header Section */}
+   
 
-      openGraph: {
-        images: ["/og-image.png"],
-      },
-    };
-  }
-}
-
-export default async function Home() {
-  try {
-    const { users } = await import("@/public/user.json");
-
-    return (
-      <>
-        <Head>
-          <title>User List</title>
-          <meta
-            name="description"
-            content="List of users with their names and descriptions"
-          />
-        </Head>
-        <main className="min-h-screen bg-gray-200 text-black">
-          <div className="container mx-auto px-5">
-            <h1 className="text-3xl font-bold py-5">User List</h1>
-            <section className="user-listing">
-              <div className="overflow-x-auto shadow rounded-xl">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="px-6 py-3 text-left text-[15px] font-semi-bold text-dark uppercase tracking-wider">
-                        Avatar
-                      </th>
-                      <th className="px-6 py-3 text-left text-[15px] font-semi-bold text-dark uppercase tracking-wider">
-                        Name
-                      </th>
-                      <th className="px-6 py-3 text-left text-[15px] font-semi-bold text-dark uppercase tracking-wider">
-                        description
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
-                    {users.map((user: User) => (
-                      <tr key={user.id}>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="flex items-center">
-                            <div className="h-10 w-10 flex-shrink-0">
-                              <Image
-                                className="h-10 w-10 rounded-full object-cover"
-                                src={user.image || "/default-avatar.png"}
-                                alt={`${user.name}'s avatar`}
-                                width={40} // Define width
-                                height={40} // Define height
-                              />
-                            </div>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                          {user.name}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {user.description}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          </div>
-        </main>
-      </>
-    );
-  } catch (error) {
-    console.log('error', error)
-    return (
-      <main className="min-h-screen bg-gray-50">
-        <h2 className="sr-only">User List</h2>
-        <section aria-labelledby="user-list-heading">
-          <h2 id="user-list-heading" className="text-3xl font-bold p-6">
-            Community Members
-          </h2>
-          <p className="text-lg p-6">Failed to load user data.</p>
+      {/* Main Content Section */}
+      <main className="px-8 py-[60px] min-h-screen justify-center flex items-center">
+        {/* Hero Section */}
+        <section className="text-center text-black py-16">
+          <h1 className="text-6xl text-black font-bold mb-4">Welcome</h1>
+          <p className="text-xl mb-8 text-black">
+            Explore our services and get to know us better.
+          </p>
+          <button className="bg-black text-white py-2 px-6 rounded-lg text-lg transition duration-300">
+            Get Started
+          </button>
         </section>
+
+        {/* Features Section */}
+        {/* <section className="flex justify-between mt-16 space-x-8">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-1/3 text-center">
+            <h2 className="text-2xl font-semibold mb-4">Feature 1</h2>
+            <p className="text-gray-600">Discover more about what we offer.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg w-1/3 text-center">
+            <h2 className="text-2xl font-semibold mb-4">Feature 2</h2>
+            <p className="text-gray-600">
+              Learn about the benefits of our services.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg w-1/3 text-center">
+            <h2 className="text-2xl font-semibold mb-4">Feature 3</h2>
+            <p className="text-gray-600">
+              Join us and start achieving your goals.
+            </p>
+          </div>
+        </section> */}
       </main>
-    );
-  }
-}
+
+      {/* Footer Section */}
+    
+    </div>
+  );
+};
+
+export default HomePage;
