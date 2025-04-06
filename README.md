@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # User List Demo Project
 
 ## Description
