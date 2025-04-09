@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: METADATA.description,
   authors: [{ name: METADATA.creator }],
   keywords: METADATA.keywords.split(', '),
+  robots: METADATA.robots
 };
 
 export default async function RootLayout({
@@ -19,7 +20,6 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head />
-      <meta name="robots" content="index, follow" />
       <body >
         {" "}
         <header className="shadow text-black py-4 px-8 flex justify-between items-center fixed top-0 bg-white w-full z-50">
