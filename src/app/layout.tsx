@@ -8,8 +8,7 @@ export const metadata: Metadata = {
   title: METADATA.title,
   description: METADATA.description,
   authors: [{ name: METADATA.creator }],
-  keywords: METADATA.keywords.split(', '),
-  robots: METADATA.robots
+  keywords: METADATA.keywords.split(', ')
 };
 
 export default async function RootLayout({
