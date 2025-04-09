@@ -29,8 +29,8 @@ Follow the steps below to run this project locally:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/user-list-page.git
-   cd user-list-page
+   git clone https://github.com/kamalkant24/next-user-listing.git
+   cd next-user-listing
    ```
 
 2. Install the required dependencies:
