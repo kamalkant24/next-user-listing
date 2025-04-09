@@ -1,7 +1,7 @@
 # User List Demo Project
 
 ## Description
-A simple user list page built using Next.js 15 with SSR. The page displays a list of users with their names and short descriptions. It is optimized for SEO and WCAG accessibility.
+A simple user list page built using Next.js 15 with SSR. The page displays a list of users with their names and short descriptions. It is optimized for SEO and compatible with WCAG accessibility.
 
 ## Features
 - Server-side rendering for SEO optimization.

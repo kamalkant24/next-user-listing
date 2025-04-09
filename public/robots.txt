@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://next-user-listing-iota.vercel.app
+
+# Sitemaps
+Sitemap: https://next-user-listing-iota.vercel.app/sitemap.xml
