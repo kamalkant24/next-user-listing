@@ -1,6 +1,5 @@
 import { User } from "@/types/user";
 import { Metadata } from "next";
-import Head from "next/head";
 import Image from "next/image";
 
 export async function generateMetadata(): Promise<Metadata> {
