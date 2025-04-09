@@ -48,6 +48,7 @@ Follow the steps below to run this project locally:
    ```
 
 2. Open your browser and go to `http://localhost:3000` to view the application.
+3. To see user's listing click on Get All Users button.
 
 ## SEO Optimization
 
